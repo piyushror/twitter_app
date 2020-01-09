@@ -1,0 +1,302 @@
+{
+	"id": "b0d72b6f-6546-e111-9ccd-f8347700bbd8",
+	"name": "twitter_test_job_collection",
+	"description": "",
+	"order": [
+		"02824d4c-f6f1-349e-73b6-188a49644883",
+		"4de893b0-f8b6-9b54-0d93-03ec8eee5db2",
+		"e337eb6b-f10c-29ad-816a-581a1a3b8596",
+		"a19d8f21-be8c-7fac-281f-dc0dbeee2201",
+		"508e9e50-157b-9a41-6288-f8cf9b918aeb",
+		"fb6ee40c-bb48-a97a-83ad-6e72ddd73a05",
+		"f1512fec-c4aa-ae7e-2f5f-5c5f0b419fd3"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1576222159640,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "02824d4c-f6f1-349e-73b6-188a49644883",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:3000/api/v1/users/",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "b0d72b6f-6546-e111-9ccd-f8347700bbd8",
+			"data": [
+				{
+					"key": "user[email]",
+					"value": "push@shirffle.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user[password]",
+					"value": "123456",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user[password_confirmation]",
+					"value": "123456",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "SignUp Api",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1576222520528,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "4de893b0-f8b6-9b54-0d93-03ec8eee5db2",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:3000/api/v1/users/sign_in",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "b0d72b6f-6546-e111-9ccd-f8347700bbd8",
+			"data": [
+				{
+					"key": "user[email]",
+					"value": "push@shirffle.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user[password]",
+					"value": "123456",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Sign In",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1576222652000,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "508e9e50-157b-9a41-6288-f8cf9b918aeb",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNTc4ODE0NzUxfQ.W95Bfz5nokLrS-SWsSAyrJyVUVhQPsFymqcg4QXzwZY\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNTc4ODE0NzUxfQ.W95Bfz5nokLrS-SWsSAyrJyVUVhQPsFymqcg4QXzwZY",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/api/v1/tweets/user_tweets?user_id=6",
+			"queryParams": [
+				{
+					"key": "user_id",
+					"value": "6",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "b0d72b6f-6546-e111-9ccd-f8347700bbd8",
+			"data": [
+				{
+					"key": "tweet[body]",
+					"value": "Testing",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Get feeds according to user id",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1576223114926,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "a19d8f21-be8c-7fac-281f-dc0dbeee2201",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNTc4ODE0NzUxfQ.W95Bfz5nokLrS-SWsSAyrJyVUVhQPsFymqcg4QXzwZY\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNTc4ODE0NzUxfQ.W95Bfz5nokLrS-SWsSAyrJyVUVhQPsFymqcg4QXzwZY",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/api/v1/tweets/feeds",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "b0d72b6f-6546-e111-9ccd-f8347700bbd8",
+			"data": [
+				{
+					"key": "tweet[body]",
+					"value": "Testing",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Get feeds",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1576223018273,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "e337eb6b-f10c-29ad-816a-581a1a3b8596",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNTc4ODE0NzUxfQ.W95Bfz5nokLrS-SWsSAyrJyVUVhQPsFymqcg4QXzwZY\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNTc4ODE0NzUxfQ.W95Bfz5nokLrS-SWsSAyrJyVUVhQPsFymqcg4QXzwZY",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/api/v1/tweets",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "b0d72b6f-6546-e111-9ccd-f8347700bbd8",
+			"data": [
+				{
+					"key": "tweet[body]",
+					"value": "Testing",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Create Tweet",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1576222958945,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "f1512fec-c4aa-ae7e-2f5f-5c5f0b419fd3",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNTc4ODE0NzUxfQ.W95Bfz5nokLrS-SWsSAyrJyVUVhQPsFymqcg4QXzwZY\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNTc4ODE0NzUxfQ.W95Bfz5nokLrS-SWsSAyrJyVUVhQPsFymqcg4QXzwZY",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/api/v1/follows/unfollow",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "b0d72b6f-6546-e111-9ccd-f8347700bbd8",
+			"data": [
+				{
+					"key": "user_id",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Unfollow To user",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1576223436385,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "fb6ee40c-bb48-a97a-83ad-6e72ddd73a05",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNTc4ODE0NzUxfQ.W95Bfz5nokLrS-SWsSAyrJyVUVhQPsFymqcg4QXzwZY\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNTc4ODE0NzUxfQ.W95Bfz5nokLrS-SWsSAyrJyVUVhQPsFymqcg4QXzwZY",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/api/v1/follows/follow",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "b0d72b6f-6546-e111-9ccd-f8347700bbd8",
+			"data": [
+				{
+					"key": "user_id",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Follow To user",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1576223390967,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
